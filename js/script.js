@@ -18,5 +18,10 @@ createApp({
         }
       ]
     }
+  },
+  methods: {
+    barTask(task) {
+      task.done = !task.done;
+    }
   }
 }).mount('#app')

@@ -15,7 +15,7 @@
       <button>INVIO</button>
     </div>
     <ul>
-      <li v-for="task in tasks">
+      <li @click="barTask(task)" v-for="task in tasks">
         <span :class="{'done' : task.done}">{{task.text}}</span> 
         <span>X</span>
       </li>
