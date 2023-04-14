@@ -15,7 +15,11 @@
       <button>INVIO</button>
     </div>
     <ul>
-      <li v-for="task in tasks">{{task.text}}</li>
+      <li v-for="task in tasks">
+        <span :class="{'done' : task.done}">{{task.text}}</span> 
+        <span>X</span>
+      </li>
+      
     </ul>
   </div>
   <script src="js/script.js"></script>
