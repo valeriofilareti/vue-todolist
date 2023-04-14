@@ -16,7 +16,7 @@
     <div class="container">
       <h1 class="title">ToDo List</h1>
       <div class="input-zone">
-        <input v-model="newTaskText" type="text">
+        <input @keyup.enter="addTask" v-model="newTaskText" type="text">
         <button @click="addTask">INVIO</button>
       </div>
       <div class="error-msg">
