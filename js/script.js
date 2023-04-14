@@ -29,6 +29,9 @@ createApp({
         this.tasks.splice(index, 1)
       } else {
         this.errorMessage = 'errore'
+        setTimeout(() => {
+          this.errorMessage ='';
+        },2000)
       }
     }
   }
