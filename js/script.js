@@ -36,12 +36,19 @@ createApp({
       }
     },
     addTask(){
-      const newTask = {
-        text: this.newTaskText,
-        done: false
-      };
-      this.tasks.push(newTask);
-      this.newTaskText = '';
+      if (this.newTaskText.length > 5) {
+        const newTask = {
+          text: this.newTaskText,
+          done: false
+        };
+        this.tasks.push(newTask);
+        this.newTaskText = '';
+      } else {
+        this.errorMessage = 'Attenzione! La task deve contenere almeno 5 caratteri!'
+        setTimeout(() => {
+          this.errorMessage ='';
+        },2000)
+      }
     }
   }
 }).mount('#app')
