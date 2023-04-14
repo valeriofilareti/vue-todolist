@@ -15,9 +15,9 @@
       <button>INVIO</button>
     </div>
     <ul>
-      <li @click="barTask(task)" v-for="task in tasks">
+      <li @click="barTask(task)" v-for="(task, index) in tasks">
         <span :class="{'done' : task.done}">{{task.text}}</span> 
-        <span>X</span>
+        <span @click="deleteTask(index)">X</span>
       </li>
       
     </ul>
