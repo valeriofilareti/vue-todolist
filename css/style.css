@@ -2,7 +2,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin: 20px;
+  font-size: 90px;
+}
+
+.input-zone, .list-zone {
+  display: flex;
+}
+
+.list-zone {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.input-zone {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+} 
+
+.error-msg {
+  text-align: center;
+  color: red;
+  padding-bottom: 50px;
+
+}
+
+.input-zone input, 
+.input-zone button {
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+ul {
+  width: 100%;
+}
+
+ul li {
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+ul li:not(ul li:last-child) {
+  border-bottom: 1px solid black;
+}
+
 
 .done {
   text-decoration: line-through;

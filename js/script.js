@@ -29,7 +29,7 @@ createApp({
       if(this.tasks[index].done) {
         this.tasks.splice(index, 1)
       } else {
-        this.errorMessage = 'errore'
+        this.errorMessage = 'Attenzione! La task non è stata completata!'
         setTimeout(() => {
           this.errorMessage ='';
         },2000)
@@ -41,6 +41,7 @@ createApp({
         done: false
       };
       this.tasks.push(newTask);
+      this.newTaskText = '';
     }
   }
 }).mount('#app')
