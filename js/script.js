@@ -17,7 +17,8 @@ createApp({
           done: false
         }
       ],
-      errorMessage: ''
+      errorMessage: '',
+      newTaskText: ''
     }
   },
   methods: {
@@ -33,6 +34,13 @@ createApp({
           this.errorMessage ='';
         },2000)
       }
+    },
+    addTask(){
+      const newTask = {
+        text: this.newTaskText,
+        done: false
+      };
+      this.tasks.push(newTask);
     }
   }
 }).mount('#app')

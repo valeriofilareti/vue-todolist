@@ -11,8 +11,8 @@
 <body>
   <div id="app">
     <div class="input-zone">
-      <input type="text">
-      <button>INVIO</button>
+      <input v-model="newTaskText" type="text">
+      <button @click="addTask">INVIO</button>
       <span>{{errorMessage}}</span>
     </div>
     <ul>
