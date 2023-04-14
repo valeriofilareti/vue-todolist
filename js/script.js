@@ -16,7 +16,8 @@ createApp({
           text: 'portare a spasso il cane',
           done: false
         }
-      ]
+      ],
+      errorMessage: ''
     }
   },
   methods: {
@@ -24,7 +25,11 @@ createApp({
       task.done = !task.done;
     },
     deleteTask(index) {
-      this.tasks.splice(index, 1)
+      if(this.tasks[index].done) {
+        this.tasks.splice(index, 1)
+      } else {
+        this.errorMessage = 'errore'
+      }
     }
   }
 }).mount('#app')

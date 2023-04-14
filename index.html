@@ -13,11 +13,12 @@
     <div class="input-zone">
       <input type="text">
       <button>INVIO</button>
+      <span>{{errorMessage}}</span>
     </div>
     <ul>
       <li @click="barTask(task)" v-for="(task, index) in tasks">
         <span :class="{'done' : task.done}">{{task.text}}</span> 
-        <span @click="deleteTask(index)">X</span>
+        <span @click.stop="deleteTask(index)">X</span>
       </li>
       
     </ul>
